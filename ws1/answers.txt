@@ -10,3 +10,5 @@ T9: logs/BACKUP.[0-9][0-9][0-9]
 T10: cp -r data/ backup/
 T11: mv data/readme.txt data/README.md
 T12: rm -ri backup/data
+T13: git add answers.txt | git commit -m 'linux basics challenge' | git push
+T14: git clone https://github.com/DivsheenKaur13/cs131
