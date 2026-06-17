@@ -1,0 +1,4 @@
+total 0
+-rw-rw-r-- 1 ishigaki-cs13 ishigaki-cs13 0 Jun 17 09:47 answers.txt
+-rw-rw-r-- 1 ishigaki-cs13 ishigaki-cs13 0 Jun 17 09:49 listing.txt
+Wed Jun 17 09:49:53 AM PDT 2026
