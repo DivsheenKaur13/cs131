@@ -1,0 +1,1 @@
+git fetch downloads remote changes without merging; git pull does fetch + merge in one step.
