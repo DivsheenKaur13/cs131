@@ -1,1 +1,16 @@
-git fetch downloads remote changes without merging; git pull does fetch + merge in one step.
+Q1: git add notes.md && git commit -m "ws2: add task line"
+Q2: git log --oneline -3
+Q3: git log --oneline -3
+Q4: git revert 9b6f5c3
+Q5: git rm --cached bigdata.bin && echo "bigdata.bin" >> .gitignore && git add .gitignore && git commit --amend --no-edit && git push && rm bigdata.bin
+Q6: git switch -c feature-summary
+Q7: git add summary.md && git commit -m "ws2: add summary on feature branch"
+Q8: git diff main feature-summary
+Q9: git switch main && git merge feature-summary
+Q10: git branch -d feature-summary
+Q11: git merge conflict-branch
+Q12: git diff --name-only --diff-filter=U
+Q13: nano summary.md
+Q14: git add summary.md && git commit
+Q15: git fetch origin && git log HEAD..origin/main --oneline
+Q16: git fetch downloads remote changes without merging; git pull does fetch + merge in one step.
