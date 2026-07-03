@@ -1,7 +1,7 @@
 Q1: git add notes.md
 git commit -m "ws2: add task line"
 Q2: git log --oneline -3
-Q3: git log --oneline -3
+Q3: 9b6f5c3
 Q4: git revert 9b6f5c3
 Q5: git rm --cached bigdata.bin
 echo "bigdata.bin" >> .gitignore
@@ -15,8 +15,9 @@ git commit -m "ws2: add summary on feature branch"
 Q8: git diff main feature-summary
 Q9: git switch main
 git merge feature-summary
-Q10: git branch -d feature-summary
+Q10: -d
 Q11: git merge conflict-branch
+# conflicted file: ws2/summary.md
 Q12: git diff --name-only --diff-filter=U
 Q13: nano summary.md
 Q14: git add summary.md
