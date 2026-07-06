@@ -1,0 +1,23 @@
+T1:
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L302
+cpg ()
+// This function copies a file or directory to a destination given as $2. It checks if $2 is a directory using -d. If it is, it runs cp $1 $2 to copy the item in, then uses && to cd into $2 only if the copy succeeded. If $2 is not a directory (like when you're just renaming a file during copy), it just runs a plain cp $1 $2 with no directory change.
+
+https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L329
+up ()
+// This function lets you move up multiple parent directories at once, so "up 3" is the same as "cd ../../..". It takes the number passed in as $1 and stores it in limit, then uses a for loop that runs limit times, appending "/.." to a variable d on each pass. After the loop, it pipes d through sed to strip the leading slash. If d ends up empty (meaning limit was 0 or blank), it defaults d to "..". Finally it cds into whatever path was built.
+
+T2:
+
+https://github.com/DivsheenKaur13/cs131/blob/544f6f461461a738b326d0b2bf2824fa94fd7613/ws4/.bashrc#L2
+alias cs131='cd ~/cs131'
+// A shell alias that shortcuts "cd ~/cs131" so I don't have to type the full path every time I want to get back to my repo.
+
+https://github.com/DivsheenKaur13/cs131/blob/544f6f461461a738b326d0b2bf2824fa94fd7613/ws4/.bashrc#L5
+alias gl='git log --oneline --graph --decorate'
+// A shell alias for a compact, graph-style git log, easier to read at a glance than the default git log output.
+
+https://github.com/DivsheenKaur13/cs131/blob/544f6f461461a738b326d0b2bf2824fa94fd7613/ws4/.bashrc#L8
+mkws ()
+// A shell function that checks with an if-statement whether the folder name passed in already exists. If it does, it prints a warning instead of overwriting anything. If not, it creates the folder with mkdir -p and cds into it.
