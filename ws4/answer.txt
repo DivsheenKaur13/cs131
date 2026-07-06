@@ -21,3 +21,7 @@ alias gl='git log --oneline --graph --decorate'
 https://github.com/DivsheenKaur13/cs131/blob/544f6f461461a738b326d0b2bf2824fa94fd7613/ws4/.bashrc#L8
 mkws ()
 // A shell function that checks with an if-statement whether the folder name passed in already exists. If it does, it prints a warning instead of overwriting anything. If not, it creates the folder with mkdir -p and cds into it.
+
+https://github.com/DivsheenKaur13/cs131/blob/544f6f461461a738b326d0b2bf2824fa94fd7613/ws4/.bashrc#L10
+if [ -d "$1" ]; then
+// An if-statement that tests whether the directory passed in as $1 already exists using the -d flag. If it does, it echoes a warning and skips the rest. If not, the else branch runs and creates the directory.
