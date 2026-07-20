@@ -1,0 +1,17 @@
+Command: time zcat data/*.gz | wc -l
+Output: 161823789 rows total (24 files, June 11 2026)
+Time: real 0m57.227s
+
+Command: zcat data/pageviews-20260611-100000.gz | head -20
+Output: schema is domain_code, page_title, count_views, total_response_size (space-delimited)
+
+Command: zcat data/pageviews-20260611-100000.gz | cut -d' ' -f1 | sort | uniq -c | sort -nr | head -20
+Output: en (1205597), en.m (912556), de (280644), ja.m (249834), zh (228723), etc.
+
+Command: time zcat data/pageviews-20260611-100000.gz | awk '{sum+=$3} END {print sum}'
+Output: 16577170 total views in that hour
+Time: real 0m4.283s
+
+Command: time zcat data/pageviews-20260611-100000.gz | grep -c "^en "
+Output: 1205597 English Wikipedia rows in that hour, matches uniq count above
+Time: real 0m2.457s

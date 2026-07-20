@@ -1,0 +1,13 @@
+Excel test:
+Tried opening pageviews-20260611-010000 (unzipped, 184.5MB, ~6.7M rows) in Excel.
+Result: "File not loaded completely" alert. Data truncated at row 1,048,576, Excel's hard row cap.
+Screenshots: Excel Alert.webp, Excel row limit.webp
+
+pandas test:
+Command: time python3 break_pandas.py
+Output: Loaded 159502523 rows in 201.36 seconds
+Time: real 3m30.301s
+
+Comparison: CLI (zcat | wc -l) counted the same 24 files in 57.227s (from Phase 1).
+pandas took ~3.5x longer just to load the data into memory, despite not crashing.
+This shows the load-everything-into-memory cost even before any actual analysis is done.
