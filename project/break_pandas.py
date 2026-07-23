@@ -4,5 +4,5 @@ import time
 
 start = time.time()
 files = glob.glob("data/*.gz")
-df = pd.concat([pd.read_csv(f, sep=' ', names=['domain','title','views','size'], compression='gzip') for f in files])
+df = pd.concat([pd.read_csv(f, sep=' ', names=['domain','title','views','size'], compression='gzip', quoting=3) for f in files])
 print(f"Loaded {len(df)} rows in {time.time() - start:.2f} seconds")

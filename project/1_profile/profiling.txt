@@ -1,5 +1,6 @@
-Command: du -sh data/
+Command: time du -sh data/
 Output: 1.4G total (24 files, June 11 2026)
+Time: real 0m0.012s
 
 Command: time zcat data/*.gz | wc -l
 Output: 161823789 rows total (24 files, June 11 2026)

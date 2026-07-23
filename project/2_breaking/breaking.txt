@@ -5,9 +5,15 @@ Screenshots: Excel Alert.webp, Excel row limit.webp
 
 pandas test:
 Command: time python3 break_pandas.py
-Output: Loaded 159502523 rows in 201.36 seconds
-Time: real 3m30.301s
+Output: Loaded 161823789 rows in 208.41 seconds
+Time: real 3m37.297s
 
 Comparison: CLI (zcat | wc -l) counted the same 24 files in 57.227s (from Phase 1).
-pandas took ~3.5x longer just to load the data into memory, despite not crashing.
-This shows the load-everything-into-memory cost even before any actual analysis is done.
+pandas took about 3.8x longer just to load the data into memory, even though it didn't crash.
+Shows the load-everything-into-memory cost before any analysis even happens.
+
+Note: first run of this only loaded 159,502,523 rows, about 2.3 million short of the CLI
+count. Turned out some page titles have literal " characters in them, and pandas was
+treating those as CSV quote marks, losing its place partway through parsing. Added
+quoting=3 to pd.read_csv() so it treats " as a normal character instead, and after that
+the row counts matched exactly.
