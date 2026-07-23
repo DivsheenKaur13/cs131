@@ -1,0 +1,65 @@
+For every extra dollar of total_bill, predicted tip rises by about $0.09, holding party size constant.
+
+Batch [46524c38057e4085a46878e66533050c] submitted.
+WARNING: No runtime version specified. Using the default runtime version. It is recommended to select a specific major.minor runtime version in production, as the default runtime version may change at any time.
+Using the default container image
+Waiting for container log creation
+PYSPARK_PYTHON=/opt/dataproc/conda/bin/python
+Generating /home/spark/.pip/pip.conf
+Configuring index-url as 'https://us-python.pkg.dev/artifact-registry-python-cache/virtual-python/simple/'
+JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+SPARK_EXTRA_CLASSPATH=
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+26/07/23 01:58:58 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-google-hadoop-file-system.properties,hadoop-metrics2.properties
+26/07/23 01:58:58 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+26/07/23 01:58:58 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
++----------+----+------+------+---+------+----+
+|total_bill| tip|   sex|smoker|day|  time|size|
++----------+----+------+------+---+------+----+
+|     16.99|1.01|Female|    No|Sun|Dinner|   2|
+|     10.34|1.66|  Male|    No|Sun|Dinner|   3|
+|     21.01| 3.5|  Male|    No|Sun|Dinner|   3|
+|     23.68|3.31|  Male|    No|Sun|Dinner|   2|
+|     24.59|3.61|Female|    No|Sun|Dinner|   4|
+|     25.29|4.71|  Male|    No|Sun|Dinner|   4|
+|      8.77| 2.0|  Male|    No|Sun|Dinner|   2|
+|     26.88|3.12|  Male|    No|Sun|Dinner|   4|
+|     15.04|1.96|  Male|    No|Sun|Dinner|   2|
+|     14.78|3.23|  Male|    No|Sun|Dinner|   2|
+|     10.27|1.71|  Male|    No|Sun|Dinner|   2|
+|     35.26| 5.0|Female|    No|Sun|Dinner|   4|
+|     15.42|1.57|  Male|    No|Sun|Dinner|   2|
+|     18.43| 3.0|  Male|    No|Sun|Dinner|   4|
+|     14.83|3.02|Female|    No|Sun|Dinner|   2|
+|     21.58|3.92|  Male|    No|Sun|Dinner|   2|
+|     10.33|1.67|Female|    No|Sun|Dinner|   3|
+|     16.29|3.71|  Male|    No|Sun|Dinner|   3|
+|     16.97| 3.5|Female|    No|Sun|Dinner|   3|
+|     20.65|3.35|  Male|    No|Sat|Dinner|   3|
++----------+----+------+------+---+------+----+
+only showing top 20 rows
+
+26/07/23 01:59:17 WARN Instrumentation: [b59d6b64] regParam is zero, which might cause numerical instability and overfitting.
+26/07/23 01:59:19 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+Coefficients: [0.09145843635504758,0.21070300388935664]
+Intercept: 0.6178364054767158
+RMSE: 0.9917585899142384
+R2: 0.47574015044898343
+Batch [46524c38057e4085a46878e66533050c] finished.
+metadata:
+  '@type': type.googleapis.com/google.cloud.dataproc.v1.BatchOperationMetadata
+  batch: projects/intrepid-snow-499516-p5/locations/us-central1/batches/46524c38057e4085a46878e66533050c
+  batchUuid: fff73b23-8b52-49aa-a1a5-4470c5e1b86e
+  createTime: '2026-07-23T01:57:36.600479Z'
+  description: Batch
+  labels:
+    goog-dataproc-batch-id: 46524c38057e4085a46878e66533050c
+    goog-dataproc-batch-uuid: fff73b23-8b52-49aa-a1a5-4470c5e1b86e
+    goog-dataproc-drz-resource-uuid: batch-fff73b23-8b52-49aa-a1a5-4470c5e1b86e
+    goog-dataproc-location: us-central1
+  operationType: BATCH
+  warnings:
+  - No runtime version specified. Using the default runtime version. It is recommended
+    to select a specific major.minor runtime version in production, as the default
+    runtime version may change at any time.
+name: projects/intrepid-snow-499516-p5/regions/us-central1/operations/f749dafb-a8bf-3129-b0d7-d9661ff1bcfa
